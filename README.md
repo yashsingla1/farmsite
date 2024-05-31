@@ -1,2 +1,2 @@
 # farmsite
-Machine learning model too identify diseases in plants
+Machine learning model to identify diseases in plants
