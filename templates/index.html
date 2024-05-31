@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    {% load static %}
+	<title>Farm Easy</title>
+
+	<style>
+        input[type=button], input[type=submit], input[type=reset] {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+  
+}
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+                .background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.background1 {
+			background: white;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+        .rightcolumn {
+  float: left;
+  width: 26%;
+  height: 342px;
+  background-color: rgb(232, 36, 1);
+  margin-top: 13px;
+  
+}
+.leftcolumn {
+  float: right;
+  width: 74%;
+  height: 345px;
+  background-color: wheat;
+  
+}
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 180px;
+			border-radius: 50px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 26px 30px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: grey;
+		}
+
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 2px solid grey;
+			border-radius: 9px;
+		}
+
+		.firstsection {
+			background-color: white;
+			height: 650px;
+		}
+        .leftcolumn1{
+  float: right;
+  width: 74%;
+  height: 230px;
+  background-color: white;
+  margin-top:1px;
+  
+}
+
+		.secondsection {
+			background-color: white;
+			height: 700px;
+            
+            
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 150px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+
+		.text-small {
+			font-family: 'cursive';
+			
+			font-size: 30px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			height: 600px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			margin: auto;
+            background-color:rgb(27, 69, 5) ;
+            
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 250px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 19px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: black;
+		}
+	</style>
+</head>
+{% load static %}
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "{% static 'img/img6.png' %}" height=100 width=100>
+			</div>
+			<li><a href="#HOME">HOME</a></li>
+			<li><a href="#ABOUT">ABOUT</a></li>
+			<li><a href="#CREATE">CREATE</a></li>
+		</ul>
+
+		<div class="rightNav">
+			<input type="text" name="search" id="search">
+			<button class="btn btn-sm">Search</button>
+		</div>
+	</nav>
+
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="HOME"></h1>
+				<p class="text-small">
+                    
+                    <img src="{% static 'img/img1.jpg' %}" height=800 width=1518>
+					
+				</p>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="secondsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				<h1 class="text-big" id="ABOUT">
+<br><br><br>
+					ABOUT
+				</h1>
+                                <br>
+				<p class="text-small">
+					At FarmTech Solutions, we are revolutionizing the way farmers protect their potato crops. Our cutting-edge technology combines the power of artificial intelligence and image recognition to predict and identify diseases in potato plants.<br><br>
+                    With just a simple click, our platform analyzes images of your potato crop, detecting early signs of diseases such as late blight, early blight, or bacterial wilt. Our advanced algorithms compare the images to a vast database of known diseases, providing accurate and timely diagnoses.<br><br>
+                    Our team of experts is committed to empowering farmers with reliable and actionable insights. Through our user-friendly interface, you can easily upload images, track disease progression, and access personalized recommendations for disease prevention and treatment.
+    
+				</p>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="paras">
+			<h1 class="sectionTag text-big" id="CREATE"></h1>
+
+			<p class="sectionSubTag text-small">
+<font color=white>
+   
+        <form method="post" enctype="multipart/form-data" action="predict">
+        {% csrf_token %}  
+        
+         <br>
+        <center><input type="file" name ="filepath" value="submit" ><br>
+         
+        <input type="submit"  class="btn btn-sm">
+       
+
+        <br>
+
+        <img src={{filepathname}} alt="imagename" height=400 width=400 >
+        <br>
+        <h1 class="sectionTag text-big" id="CREATE">Sample is {{predictedlabel}}</h1>
+        
+
+
+
+
+
+
+
+</font>
+			</p>
+
+
+		</div>
+
+		<div class="thumbnail">
+			
+		</div>
+	</section>
+
+	<footer class="background1">
+		<p class="text-footer">
+			Copyright ©-All rights are reserved
+		</p>
+
+
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="'en"
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            h1 {
+              background-color: wheat;
+            }
+            .w3-tangerine {
+  font-family: 'Tangerine', serif;
+}
+            .rightcolumn {
+  float: left;
+  width: 26%;
+  height: 342px;
+  background-color: rgb(232, 36, 1);
+  margin-top: 13px;
+  
+}
+.rightcolumn1 {
+  float: left;
+  width: 26%;
+  height: 230px;
+  background-color: wheat;
+  margin-top: 13px;
+  
+}
+            div {
+              background-color: tomato;
+            }
+            .leftcolumn {
+  float: right;
+  width: 74%;
+  height: 345px;
+  background-color: wheat;
+  
+}
+.leftcolumn1{
+  float: right;
+  width: 74%;
+  height: 230px;
+  background-color: wheat;
+  margin-top:1px;
+  
+}
+
+            input{
+                background-color: tomato;
+            }
+            .footer {
+  background-color: rgb(162, 44, 44);
+  padding: 68px;
+  text-align: center;
+  margin-top: 330px;
+  height: 5px;
+}
+            
+            p {
+              background-color: yellow;
+            }
+            .header {
+  background-color: tomato;
+  padding: 20px;
+  text-align: center;
+}
+            </style>
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <title>yash</title>
+    </head>
+    <body bgcolor="wheat"><div class="header">
+        <font color="wheat"><center><marquee>...................................................................................</marquee></center></font>
+        <h1><font color="black"><B>FARMeasy</B></font> </h1>
+        <right><i class="fas fa-bars" style="font-size:60px;color:black;"></i></right>
+        <font color="wheat"><center><marquee>...................................................................................</marquee></center></font>
+        </div>
+        
+        
+        <h1 style="background-color:rgba(248, 220, 110, 0.5);"><div class="rightcolumn"><font color="white"><center>UPLOAD IMAGE</center></font>
+          <br>
+          <center><i class="fa fa-spinner w3-spin w3-wheat" style="font-size:128px"></i></center>
+        </div> </h1>
+        
+        <div class="w3-card-4">
+         <form method="post" enctype="multipart/form-data" action="predict">
+         {% csrf_token %}  
+         <div class="leftcolumn"> 
+          
+         <center><input type="file" name ="filepath" class="w3-input w3-border w3-red"><br>
+          <div class="rightcolumn1">
+         <input type="submit" class="w3-btn w3-red w3-border">
+         </div>
+        <br>
+        <div class="leftcolumn1">
+         <img src={{filepathname}} alt="imagename" class="w3-circle">
+        </div></center></div></form>
+         <hr color="red" height=5000>
+         <h1><div class="footer"><font color="white"> sample is {{predictedlabel}}</font></div></h1>
+         </center>
+
+         </form>
+         </div>
+        
+    </body>
+</html>
